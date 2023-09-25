@@ -71,7 +71,7 @@ body {
 	transform: translateZ(380px);
 }
 .hero-content {
-	font-size: calc(var(--index) * 2.9);
+	font-size: calc(var(--index) * 3.5);
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: calc(var(--index) * -.15);
@@ -105,4 +105,8 @@ body {
 }
 .layer-4, .layer-5, .layer-6 {
 	pointer-events: none;
+}
+.myMainText {
+	color: #000000;
+	-webkit-text-stroke: 4px #ffffff;
 }
