@@ -28,6 +28,12 @@
 					<button class="button-start">open menu</button>
 				</div>
 			</div>
+			<div class="wrapper">
+				<div class="arrow one">
+					<img width="50" src="images/Arrow-down.svg.png" alt="">
+				</div>
+				<div class="arrow two"><img width="50" src="images/Arrow-down.svg.png" alt=""></div>
+			</div>
 			<div class="layers__item layer-4">
 				<canvas class="rain"></canvas>
 			</div>
@@ -35,6 +41,111 @@
 			<div class="layers__item layer-6" style="background-image: url(img/layer-6.png);"></div>
 		</div>
 	</section>
+	<div class="hero-content-menu">
+		<button class="button-Menu">Mein</button>
+		<button class="button-Menu">Menu</button>
+		<button class="button-Menu">Delivery</button>
+		<button class="button-Menu">Contacts</button>
+		<button class="button-Menu">Login</button>
+	</div>
+	<br>
+	<hr>
+	<hr>
+	<div class="hero-content-Text"><h5>Popular pizzas</h5></div>
+<section id="pizzas" class="cards">
+	<article>
+		<div class="card">
+			<div class="card__top">
+				<a href="#openModal" class="card__image">
+					<img
+							src="./images/BarbecueChicken.png"
+							alt="Barbecue Chicken"
+					/>
+				</a>
+			</div>
+			<div class="card__bottom">
+				<div class="card__prices">
+					<div class="card__price card__price--common">30</div>
+				</div>
+				<a href="#openModal" class="card__title" id="btn">
+					Barbecue Chicken
+				</a>
+				<button class="card__add">В корзину</button>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="card">
+			<div class="card__top">
+				<a href="#openModal" class="card__image">
+					<img
+							src="./images/Carbonara.png"
+							alt="Carbonara"
+					/>
+				</a>
+			</div>
+			<div class="card__bottom">
+				<div class="card__prices">
+					<div class="card__price card__price--common">30</div>
+				</div>
+				<a href="#openModal" class="card__title" id="btn">
+					Carbonara
+				</a>
+				<button class="card__add">В корзину</button>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="card">
+			<div class="card__top">
+				<a href="#openModal" class="card__image">
+					<img
+							src="./images/CountryPizza.png"
+							alt="Country Pizza"
+					/>
+				</a>
+			</div>
+			<div class="card__bottom">
+				<div class="card__prices">
+					<div class="card__price card__price--common">30</div>
+				</div>
+				<a href="#openModal" class="card__title" id="btn">
+					Country Pizza
+				</a>
+				<button class="card__add">В корзину</button>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="card">
+			<div class="card__top">
+				<a href="#openModal" class="card__image">
+					<img
+							src="./images/HamAndCheese.png"
+							alt="Ham and Cheese"
+					/>
+				</a>
+			</div>
+			<div class="card__bottom">
+				<div class="card__prices">
+					<div class="card__price card__price--common">30</div>
+				</div>
+				<a href="#openModal" class="card__title" id="btn">
+					Ham and Cheese
+				</a>
+				<button class="card__add">В корзину</button>
+			</div>
+		</div>
+	</article>
+</section>
 
+	<div id="openModal" class="modalDialog">
+		<div>
+			<a href="#close" title="Закрыть" class="close">X</a>
+			<h2></h2>
+			<p>Пример простого модального окна, которое может быть создано с использованием CSS3.</p>
+			<p>Его можно использовать в широком диапазоне, начиная от вывода сообщений и заканчивая формой регистрации.</p>
+		</div>
+	</div>
 </body>
 </html>
