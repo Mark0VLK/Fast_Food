@@ -7,6 +7,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/app.js" defer></script>
+	<script src="js/Login.js" defer></script>
 	<script src="libs/rain.js" defer></script>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="icon_io/apple-touch-icon.png">
@@ -46,7 +47,7 @@
 		<button class="button-Menu">Menu</button>
 		<button class="button-Menu">Delivery</button>
 		<button class="button-Menu">Contacts</button>
-		<button class="button-Menu">Login</button>
+		<a href="#Login" class="open-modal"><button class="button-Menu">Login</button></a>
 	</div>
 	<br>
 	<hr>
@@ -138,6 +139,54 @@
 		</div>
 	</article>
 </section>
+
+	<div class="modal-login" id="Login">
+		<div class="modal-content-login">
+			<div class="body-login">
+				<div class="container" id="container">
+					<div class="form-container sign-up-container">
+						<form class="form-login" action="#">
+							<h1 class="h1-login">Create Account</h1>
+							<span class="span-login">or use your email for registration</span>
+							<input class="input-login" type="text" placeholder="Name" />
+							<input class="input-login" type="text" placeholder="Phone number">
+							<input class="input-login" type="email" placeholder="Email" />
+							<input class="input-login" type="password" placeholder="Password" />
+							<button class="button-login">Sign Up</button>
+						</form>
+					</div>
+					<div class="form-container sign-in-container">
+						<form class="form-login" action="#">
+							<h1 class="h1-login">Sign in</h1>
+							<span class="span-login">or use your account</span>
+							<input class="input-login" type="email" placeholder="Email" />
+							<input class="input-login" type="password" placeholder="Password" />
+							<a href="#" class="a-login">Forgot your password?</a>
+							<button class="button-login">Sign In</button>
+						</form>
+					</div>
+					<div class="overlay-container">
+						<div class="overlay">
+							<div class="overlay-panel overlay-left">
+								<h1 class="h1-login">Welcome Back!</h1>
+								<p class="p-login">To order pizza, please log in with your personal details</p>
+								<button class="button-login ghost" id="signIn">Sign In</button>
+								<br>
+								<button class="button-login ghost" id="closeButtonLeft">Close</button> <!-- Кнопка закрытия слева -->
+							</div>
+							<div class="overlay-panel overlay-right">
+								<h1 class="h1-login">Hello, Friend!</h1>
+								<p class="p-login">You can register and start ordering pizza</p>
+								<button class="button-login ghost" id="signUp">Sign Up</button>
+								<br>
+								<button class="button-login ghost" id="closeButtonRight">Close</button> <!-- Кнопка закрытия справа -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id="openModal" class="modalDialog">
 		<div>

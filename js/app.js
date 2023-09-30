@@ -6,3 +6,17 @@ document.addEventListener('mousemove', e => {
 		`
 	})
 })
+
+
+//Для открытия модального окна
+document.addEventListener('DOMContentLoaded', function() {
+	const openModalLinks = document.querySelectorAll('.open-modal');
+	openModalLinks.forEach(function(link) {
+		link.addEventListener('click', function(event) {
+			event.preventDefault();
+			const modalId = this.getAttribute('href').substring(1); // Получаем идентификатор модального окна
+			const modal = document.getElementById(modalId);
+			modal.style.display = 'block';
+		});
+	});
+});
