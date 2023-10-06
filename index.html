@@ -8,8 +8,10 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/app.js" defer></script>
 	<script src="js/Login.js" defer></script>
+	<script src="js/Button.js" defer></script>
+	<script src="js/Menu.js" defer></script>
+	<script src="js/Info.js" defer></script>
 	<script src="libs/rain.js" defer></script>
-
 	<link rel="apple-touch-icon" sizes="180x180" href="icon_io/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="icon_io/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="icon_io/favicon-16x16.png">
@@ -17,7 +19,6 @@
 
 </head>
 <body>
-
 	<section class="layers">
 		<div class="layers__container">
 			<div class="layers__item layer-1" style="background-image: url(img/layer-1.jpg);"></div>
@@ -43,103 +44,595 @@
 		</div>
 	</section>
 	<div class="hero-content-menu">
-		<button class="button-Menu">Mein</button>
-		<button class="button-Menu">Menu</button>
-		<button class="button-Menu">Delivery</button>
-		<button class="button-Menu">Contacts</button>
+		<button class="button-Menu" id="showMeinButton">Mein</button>
+		<button class="button-Menu" id="showMenuButton">Menu</button>
+		<button class="button-Menu" id="showBasketButton">Basket</button>
+		<button class="button-Menu" id="showContactsButton">Contacts</button>
 		<a href="#Login" class="open-modal"><button class="button-Menu">Login</button></a>
 	</div>
 	<br>
 	<hr>
 	<hr>
-	<div class="hero-content-Text"><h5>Popular pizzas</h5></div>
-<section id="pizzas" class="cards">
-	<article>
-		<div class="card">
-			<div class="card__top">
-				<a href="#openModal" class="card__image">
-					<img
-							src="./images/BarbecueChicken.png"
-							alt="Barbecue Chicken"
-					/>
-				</a>
-			</div>
-			<div class="card__bottom">
-				<div class="card__prices">
-					<div class="card__price card__price--common">30</div>
+	<div id="Mein">
+		<div class="hero-content-Text"><h5>Popular pizzas</h5></div>
+		<section id="pizzas" class="cards">
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/BarbecueChicken.png"
+									alt="Barbecue Chicken"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Barbecue Chicken
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
 				</div>
-				<a href="#openModal" class="card__title" id="btn">
-					Barbecue Chicken
-				</a>
-				<button class="card__add">В корзину</button>
+			</article>
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/Carbonara.png"
+									alt="Carbonara"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Carbonara
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/CountryPizza.png"
+									alt="Country Pizza"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Country Pizza
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/HamAndCheese.png"
+									alt="Ham and Cheese"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Ham and Cheese
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/Mix.png"
+									alt="Ham and Cheese"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Mix
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/Mixic.png"
+									alt="Ham and Cheese"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Mixic
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/Pepperoni.png"
+									alt="Ham and Cheese"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Pepperoni
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
+				</div>
+			</article>
+			<article>
+				<div class="card">
+					<div class="card__top">
+						<a href="#openModal" class="card__image">
+							<img
+									src="./images/Pesto.png"
+									alt="Ham and Cheese"
+							/>
+						</a>
+					</div>
+					<div class="card__bottom">
+						<div class="card__prices">
+							<div class="card__price card__price--common">30</div>
+						</div>
+						<a href="#openModal" class="card__title">
+							Pesto
+						</a>
+						<button class="card__add">В корзину</button>
+					</div>
+				</div>
+			</article>
+		</section>
+	</div>
+	<div id="Menu">
+		<div>
+			<div class="hero-content-menu">
+				<button class="button-menu-menu" id="showPizzaButton">Pizza</button>
+				<button class="button-menu-menu" id="showSnackButton">Snack</button>
+				<button class="button-menu-menu" id="showDrinksButton">Drinks</button>
+			</div>
+			<div id="Menu-Pizza">
+				<section id="pizza" class="cards">
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/BarbecueChicken.png"
+											alt="Barbecue Chicken"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Barbecue Chicken
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/Carbonara.png"
+											alt="Carbonara"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Carbonara
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/CountryPizza.png"
+											alt="Country Pizza"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Country Pizza
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/HamAndCheese.png"
+											alt="Ham and Cheese"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Ham and Cheese
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/Mix.png"
+											alt="Ham and Cheese"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Mix
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/Mixic.png"
+											alt="Ham and Cheese"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Mixic
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/Pepperoni.png"
+											alt="Ham and Cheese"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Pepperoni
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/Pesto.png"
+											alt="Ham and Cheese"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Pesto
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/PizzaFromHalves.png"
+											alt="From Halves"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									From Halves
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/PizzaJulienne.png"
+											alt="Julienne"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Julienne
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./images/VokMan.png"
+											alt="Your"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Your
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+			<div id="Menu-Snack">
+				<section id="snack" class="cards">
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./snack/Sandwich%20ham%20and%20cheese.png"
+											alt="Sandwich ham and cheese"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">30</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Sandwich ham and cheese
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+			<div id="Menu-Drinks">
+				<section id="drinks" class="cards">
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./drinks/Americano%20Coffee.png"
+											alt="Americano coffee"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common"></div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Americano coffee
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./drinks/Cappuccino%20Coffee.png"
+											alt="Cappuccino coffee"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">6</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Cappuccino coffee								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./drinks/Caramel%20Cappuccino%20Coffee.png"
+											alt="Caramel Cappuccino Coffee"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">6</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Caramel Cappuccino
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./drinks/Coconut%20Latte%20Coffee.png"
+											alt="Coconut Latte Coffee"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">6</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Coconut Latte Coffee
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./drinks/Coffee%20Nut%20latte.png"
+											alt="Coffee Nut latte"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">6</div>
+								</div>
+								<a href="#openModal" class="card__title">
+									Coffee Nut latte
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="card">
+							<div class="card__top">
+								<a href="#openModal" class="card__image">
+									<img
+											src="./drinks/Irish%20Cappuccino.png"
+											alt="Irish Cappuccino"
+									/>
+								</a>
+							</div>
+							<div class="card__bottom">
+								<div class="card__prices">
+									<div class="card__price card__price--common">6</div>
+								</div>
+								<a href="#openModal" class="card__title" id="btn">
+									Irish Cappuccino
+								</a>
+								<button class="card__add">В корзину</button>
+							</div>
+						</div>
+					</article>
+				</section>
 			</div>
 		</div>
-	</article>
-	<article>
-		<div class="card">
-			<div class="card__top">
-				<a href="#openModal" class="card__image">
-					<img
-							src="./images/Carbonara.png"
-							alt="Carbonara"
-					/>
-				</a>
-			</div>
-			<div class="card__bottom">
-				<div class="card__prices">
-					<div class="card__price card__price--common">30</div>
-				</div>
-				<a href="#openModal" class="card__title" id="btn">
-					Carbonara
-				</a>
-				<button class="card__add">В корзину</button>
-			</div>
-		</div>
-	</article>
-	<article>
-		<div class="card">
-			<div class="card__top">
-				<a href="#openModal" class="card__image">
-					<img
-							src="./images/CountryPizza.png"
-							alt="Country Pizza"
-					/>
-				</a>
-			</div>
-			<div class="card__bottom">
-				<div class="card__prices">
-					<div class="card__price card__price--common">30</div>
-				</div>
-				<a href="#openModal" class="card__title" id="btn">
-					Country Pizza
-				</a>
-				<button class="card__add">В корзину</button>
-			</div>
-		</div>
-	</article>
-	<article>
-		<div class="card">
-			<div class="card__top">
-				<a href="#openModal" class="card__image">
-					<img
-							src="./images/HamAndCheese.png"
-							alt="Ham and Cheese"
-					/>
-				</a>
-			</div>
-			<div class="card__bottom">
-				<div class="card__prices">
-					<div class="card__price card__price--common">30</div>
-				</div>
-				<a href="#openModal" class="card__title" id="btn">
-					Ham and Cheese
-				</a>
-				<button class="card__add">В корзину</button>
-			</div>
-		</div>
-	</article>
-</section>
+	</div>
+	<div id="Basket">
+		<div>
 
+		</div>
+	</div>
+	<div id="Contacts">
+		<div>
+		</div>
+	</div>
 	<div class="modal-login" id="Login">
 		<div class="modal-content-login">
 			<div class="body-login">
@@ -187,13 +680,27 @@
 			</div>
 		</div>
 	</div>
-
 	<div id="openModal" class="modalDialog">
-		<div>
+		<div class="modalContent">
 			<a href="#close" title="Закрыть" class="close">X</a>
-			<h2></h2>
-			<p>Пример простого модального окна, которое может быть создано с использованием CSS3.</p>
-			<p>Его можно использовать в широком диапазоне, начиная от вывода сообщений и заканчивая формой регистрации.</p>
+			<div class="pizzaDetails">
+				<img class="img-info" src="images/BarbecueChicken.png" alt="Изображение пиццы">
+				<div class="pizzaInfo">
+					<h2>Barbecue Chicken</h2>
+					<p>Калорийность: 500 ккал</p>
+					<p>Краткое описание: Вкуснейшая пицца с курицей и барбекю соусом.</p>
+
+					<div class="sizeSelector">
+						<label class="sizeOption" data-value="1">Маленькая</label>
+						<label class="sizeOption" data-value="2">Средняя</label>
+						<label class="sizeOption" data-value="3">Большая</label>
+						<div class="sizeHighlight"></div>
+					</div>
+
+					<input type="range" id="pizzaSize" min="1" max="3" step="1" value="1" style="display: none;">
+					<button class="addToCart">Добавить в корзину</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

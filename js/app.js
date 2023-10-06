@@ -7,7 +7,20 @@ document.addEventListener('mousemove', e => {
 	})
 })
 
-
+document.addEventListener('DOMContentLoaded', function() {
+	const menuSection = document.getElementById('Menu');
+	const basketSection = document.getElementById('Basket');
+	const contactsSection = document.getElementById('Contacts');
+	menuSection.style.display = 'none';
+	basketSection.style.display = 'none';
+	contactsSection.style.display = 'none';
+});
+document.addEventListener('DOMContentLoaded', function() {
+	const snackSection = document.getElementById('Menu-Snack');
+	const drinksSection = document.getElementById('Menu-Drinks');
+	snackSection.style.display = 'none';
+	drinksSection.style.display = 'none';
+});
 //Для открытия модального окна
 document.addEventListener('DOMContentLoaded', function() {
 	const openModalLinks = document.querySelectorAll('.open-modal');
