@@ -290,7 +290,7 @@ form {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
+    z-index: 998;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
@@ -313,13 +313,14 @@ form {
     background: -o-linear-gradient(#FFA07A, #FF6347);
 }
 .close {
+    z-index: 99999;
     background: #606061;
     color: #FFFFFF;
     line-height: 25px;
     position: absolute;
-    right: -12px;
     text-align: center;
-    top: -10px;
+    top: 10px; /* Изменено на положительное значение */
+    right: 10px; /* Изменено на положительное значение */
     width: 24px;
     text-decoration: none;
     font-weight: bold;
@@ -333,7 +334,6 @@ form {
 .close:hover {
     background: #00d9ff;
 }
-
 .wrapper {
     height: 100vh;
 }
@@ -362,8 +362,8 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
 }
 .pizzaDetails {
     display: flex;
@@ -401,10 +401,26 @@ form {
 }
 
 
+body.modal-active {
+    overflow: hidden; /* Это блокирует прокрутку страницы, когда открыто модальное окно */
+}
+.modal-overlay {
+    display: none; /* Слой изначально скрыт */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9997; /* Убедитесь, что слой находится поверх всего остального */
+    background: rgba(0,0,0,0.5); /* Это добавит тёмный фон под модальным окном */
+}
+.modal-active .modal-overlay {
+    display: block; /* Показать слой, когда body имеет класс .modal-active */
+}
 .modal-login {
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 9998;
     left: 50%;/* Размещаем левую часть модального окна посередине экрана */
     top: 50%;/* Размещаем верхнюю часть модального окна посередине экрана */
     transform: translate(-50%, -50%); /* Центрируем модальное окно точно посередине экрана */
@@ -607,27 +623,7 @@ form {
     height: 40px;
     width: 40px;
 }
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-footer p {
-    margin: 10px 0;
-}
-footer i {
-    color: red;
-}
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
+
 
 .button-menu-menu{
     font-family: Cambria;
@@ -644,3 +640,9 @@ footer a {
     cursor: pointer;
     margin-top: calc(var(--index) * 0);
 }
+/*.social-icon {*/
+/*    width: 15px; !* Желаемая ширина *!*/
+/*    height: 15px; !* Желаемая высота *!*/
+/*    margin-right: 10px; !* Расстояние между иконками (по вашему выбору) *!*/
+/*}*/
+
