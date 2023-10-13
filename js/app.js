@@ -33,3 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 });
+
+const openModalLink = document.querySelector('.open-modal');
+openModalLink.addEventListener('click', (event) => {
+	event.preventDefault(); // Предотвращаем стандартное действие ссылки - переход по URL
+
+	// Здесь добавляем код для отображения модального окна
+	modal.style.display = 'block';
+	container.classList.add('right-panel-active');
+	document.body.classList.add('modal-active');
+});

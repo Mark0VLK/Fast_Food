@@ -48,7 +48,7 @@
 		<button class="button-Menu" id="showMenuButton">Menu</button>
 		<button class="button-Menu" id="showBasketButton">Basket</button>
 		<button class="button-Menu" id="showContactsButton">Contacts</button>
-		<a href="#Login" class="open-modal"><button class="button-Menu">Login</button></a>
+		<a href="#ModalOverlay" class="open-modal"><button class="button-Menu">Login</button></a>
 	</div>
 	<br>
 	<hr>
@@ -233,6 +233,7 @@
 				<button class="button-menu-menu" id="showSnackButton">Snack</button>
 				<button class="button-menu-menu" id="showDrinksButton">Drinks</button>
 			</div>
+			<br>
 			<div id="Menu-Pizza">
 				<section id="pizza" class="cards">
 					<article>
@@ -633,46 +634,48 @@
 		<div>
 		</div>
 	</div>
-	<div class="modal-login" id="Login">
-		<div class="modal-content-login">
-			<div class="body-login">
-				<div class="container" id="container">
-					<div class="form-container sign-up-container">
-						<form class="form-login" action="#">
-							<h1 class="h1-login">Create Account</h1>
-							<span class="span-login">or use your email for registration</span>
-							<input class="input-login" type="text" placeholder="Name" />
-							<input class="input-login" type="text" placeholder="Phone number">
-							<input class="input-login" type="email" placeholder="Email" />
-							<input class="input-login" type="password" placeholder="Password" />
-							<button class="button-login">Sign Up</button>
-						</form>
-					</div>
-					<div class="form-container sign-in-container">
-						<form class="form-login" action="#">
-							<h1 class="h1-login">Sign in</h1>
-							<span class="span-login">or use your account</span>
-							<input class="input-login" type="email" placeholder="Email" />
-							<input class="input-login" type="password" placeholder="Password" />
-							<a href="#" class="a-login">Forgot your password?</a>
-							<button class="button-login">Sign In</button>
-						</form>
-					</div>
-					<div class="overlay-container">
-						<div class="overlay">
-							<div class="overlay-panel overlay-left">
-								<h1 class="h1-login">Welcome Back!</h1>
-								<p class="p-login">To order pizza, please log in with your personal details</p>
-								<button class="button-login ghost" id="signIn">Sign In</button>
-								<br>
-								<button class="button-login ghost" id="closeButtonLeft">Close</button> <!-- Кнопка закрытия слева -->
-							</div>
-							<div class="overlay-panel overlay-right">
-								<h1 class="h1-login">Hello, Friend!</h1>
-								<p class="p-login">You can register and start ordering pizza</p>
-								<button class="button-login ghost" id="signUp">Sign Up</button>
-								<br>
-								<button class="button-login ghost" id="closeButtonRight">Close</button> <!-- Кнопка закрытия справа -->
+	<div class="modal-overlay" id="ModalOverlay">
+		<div class="modal-login">
+			<div class="modal-content-login">
+				<div class="body-login">
+					<div class="container" id="container">
+						<div class="form-container sign-up-container">
+							<form class="form-login" action="#">
+								<a href="#close" title="Закрыть" class="close" id="closeButtonRight">X</a>
+								<h1 class="h1-login">Create Account</h1>
+								<span class="span-login">or use your email for registration</span>
+								<input class="input-login" type="text" placeholder="Name" />
+								<input class="input-login" type="text" placeholder="Phone number">
+								<input class="input-login" type="email" placeholder="Email" />
+								<input class="input-login" type="password" placeholder="Password" />
+								<button class="button-login">Sign Up</button>
+							</form>
+						</div>
+						<div class="form-container sign-in-container">
+							<form class="form-login" action="#">
+								<h1 class="h1-login">Sign in</h1>
+								<span class="span-login">or use your account</span>
+								<input class="input-login" type="email" placeholder="Email" />
+								<input class="input-login" type="password" placeholder="Password" />
+								<a href="#" class="a-login">Forgot your password?</a>
+								<button class="button-login">Sign In</button>
+							</form>
+						</div>
+						<div class="overlay-container">
+							<div class="overlay">
+								<div class="overlay-panel overlay-left">
+									<h1 class="h1-login">Welcome Back!</h1>
+									<p class="p-login">To order pizza, please log in with your personal details</p>
+									<button class="button-login ghost" id="signIn">Sign In</button>
+									<br>
+								</div>
+								<div class="overlay-panel overlay-right">
+									<a href="#close" title="Закрыть" class="close" id="closeButtonLeft">X</a>
+									<h1 class="h1-login">Hello, Friend!</h1>
+									<p class="p-login">You can register and start ordering pizza</p>
+									<button class="button-login ghost" id="signUp">Sign Up</button>
+									<br>
+								</div>
 							</div>
 						</div>
 					</div>
