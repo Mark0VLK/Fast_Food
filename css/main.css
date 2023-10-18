@@ -106,15 +106,6 @@ form {
     margin-top: calc(var(--index) * 5.5);
 }
 
-.hero-content-Text {
-    font-size: calc(var(--index) * 3.5);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: calc(var(--index) * -.15);
-    line-height: 1.35em;
-    margin-top: calc(var(--index) * 0.5);
-}
-
 .hero-content-menu {
     position: sticky;
     top: 0;
@@ -178,8 +169,44 @@ form {
 }
 
 .myMainText {
+    font-family: "Arial Black";
     color: #000000;
-    -webkit-text-stroke: 4px #ffffff;
+    -webkit-text-stroke: 3px #ffffff;
+}
+
+.container-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text {
+    font-family: "Calibri Light";
+    color: black;
+    font-size: 30px;
+    width: 50%;
+    margin-bottom: 200px;
+    margin-left: 60px;
+    margin-right: 60px;    text-align: justify;
+}
+.text-h1{
+    color: black;
+    font-size: 60px;
+    width: 50%;
+    padding: 50px;
+    text-align: justify;
+}
+.rounded-image {
+    border-radius: 5%;
+    overflow: hidden;
+    width: 700px; /* Задайте необходимую ширину */
+    height: 600px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.rounded-image img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .cards {
@@ -400,23 +427,6 @@ form {
     color: white;
 }
 
-
-body.modal-active {
-    overflow: hidden; /* Это блокирует прокрутку страницы, когда открыто модальное окно */
-}
-.modal-overlay {
-    display: none; /* Слой изначально скрыт */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9997; /* Убедитесь, что слой находится поверх всего остального */
-    background: rgba(0,0,0,0.5); /* Это добавит тёмный фон под модальным окном */
-}
-.modal-active .modal-overlay {
-    display: block; /* Показать слой, когда body имеет класс .modal-active */
-}
 .modal-login {
     display: none;
     position: fixed;
@@ -640,9 +650,5 @@ body.modal-active {
     cursor: pointer;
     margin-top: calc(var(--index) * 0);
 }
-/*.social-icon {*/
-/*    width: 15px; !* Желаемая ширина *!*/
-/*    height: 15px; !* Желаемая высота *!*/
-/*    margin-right: 10px; !* Расстояние между иконками (по вашему выбору) *!*/
-/*}*/
+
 
