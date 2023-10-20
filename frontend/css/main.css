@@ -7,27 +7,16 @@
 :root {
     --index: calc(1vw + 1vh);
     --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
-}
-
-@font-face {
-    font-family: kamerik-3d;
-    src: url(../fonts/kamerik205-heavy.woff2);
-    font-weight: 900;
-}
-
-@font-face {
-    font-family: merriweather-italic-3d;
-    src: url(../fonts/merriweather-regular-italic.woff2);
+    --move-y: 0;
+    --move-x: 0;
 }
 
 body {
     background-color: #ffffff;
     color: #fff;
-    font-family: kamerik-3d;
 }
 
 h5 {
-    font-family: "Book Antiqua";
     color: black;
 }
 

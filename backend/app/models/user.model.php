@@ -1,9 +1,5 @@
 <?php
 
-namespace app\models;
-
-use app\config\Connection;
-
 require_once "../config/connection.php";
 
 class User extends Connection
@@ -37,7 +33,7 @@ class User extends Connection
     public static function save($data)
     {
         try {
-            $sql = 'INSERT INTO public."user" (name, surname, "phoneNumber", email, password, "birthDate", country, created, changed) VALUES (:name, :surname, :"phoneNumber", :email, :password, :"birthDate", :country, :created, :changed)';
+            $sql = 'INSERT INTO public."user" (name, surname, "phoneNumber", email, password, "birthDate", created, changed) VALUES (:name, :surname, :"phoneNumber", :email, :password, :"birthDate", :created, :changed)';
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':name', $data['name']);
             $stmt->bindParam(':surname', $data['surname']);
@@ -58,7 +54,7 @@ class User extends Connection
     public static function update($data)
     {
         try {
-            $sql = 'UPDATE public."user" SET name = :name, surname = :surname, "phoneNumber" = :"phoneNumber", email = :email, password = :password, "birthDate" = :"birthDate", country = :country, created = :created, changed = :changed WHERE id = :id';
+            $sql = 'UPDATE public."user" SET name = :name, surname = :surname, "phoneNumber" = :"phoneNumber", email = :email, password = :password, "birthDate" = :"birthDate", created = :created, changed = :changed WHERE id = :id';
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':name', $data['name']);
             $stmt->bindParam(':surname', $data['surname']);
