@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	snackSection.style.display = 'none';
 	drinksSection.style.display = 'none';
 });
-//Для открытия модального окна
+// Для открытия модального окна
 document.addEventListener('DOMContentLoaded', function() {
 	const openModalLinks = document.querySelectorAll('.open-modal');
 	openModalLinks.forEach(function(link) {
