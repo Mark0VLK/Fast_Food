@@ -6,19 +6,23 @@
 
 :root {
     --index: calc(1vw + 1vh);
+<<<<<<< HEAD:css/main.css
     --move-y:0;
     --move-x:0;
     --transition:0;
+=======
+    --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+    --move-y: 0;
+    --move-x: 0;
+>>>>>>> backend:frontend/css/main.css
 }
 
 body {
     background-color: #ffffff;
     color: #fff;
-    font-family: kamerik-3d;
 }
 
 h5 {
-    font-family: "Book Antiqua";
     color: black;
 }
 
