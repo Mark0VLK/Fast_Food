@@ -25,7 +25,7 @@
 			<div class="layers__item layer-3">
 				<div class="hero-content">
 					<h1 class="myMainText">italian pizza</h1>
-					<h4 class="myMainText"><span>в вашем городе</span></h4>
+					<h4 class="myMainText-2"><span>в вашем городе</span></h4>
 					<button class="button-start">открыть меню</button>
 				</div>
 			</div>
@@ -47,6 +47,7 @@
 		<button class="button-Menu" id="showMenuButton">Меню</button>
 		<button class="button-Menu" id="showBasketButton">Корзина</button>
 		<a href="#ModalOverlay" class="open-modal"><button class="button-Menu">Войти</button></a>
+		<button class="button-Menu" id="showUserButton">Пользователь</button>
 	</div>
 	<br>
 	<hr>
@@ -489,13 +490,123 @@
 	</div>
 	<div id="Basket">
 		<div>
+			<br>
+			<h2 class="text-h2">Итоговая сумма заказа составляет: 21 руб.</h2>
+			<section class="cards">
+				<article>
+					<div class="card">
+						<div class="card__top">
+							<a href="#openModal" class="card__image">
+								<img
+										src="frontend/picture/drinks/Americano%20Coffee.png"
+										alt="Americano coffee"
+								/>
+							</a>
+						</div>
+						<div class="card__bottom">
+							<div class="card__prices">
+								<div class="card__price card__price--common">6</div>
+							</div>
+							<a href="#openModal" class="card__title">
+								Американо
+							</a>
+							<button class="card__add">Удалить</button>
+						</div>
+					</div>
+				</article>
+				<article>
+					<div class="card">
+						<div class="card__top">
+							<a href="#openModal" class="card__image">
+								<img
+										src="frontend/picture/snack/Sandwich%20ham%20and%20cheese.png"
+										alt="Sandwich ham and cheese"
+								/>
+							</a>
+						</div>
+						<div class="card__bottom">
+							<div class="card__prices">
+								<div class="card__price card__price--common">15</div>
+							</div>
+							<a href="#openModal" class="card__title">
+								Сэндвич ветчина и сыр
+							</a>
+							<button class="card__add">Удалить</button>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+		<br>
+	</div>
+	<div id="User">
+		<div class="user-container">
+			<h1 class="h1-user">Профиль пользователя</h1>
 
+			<div id="personal-info">
+				<h2 class="h2-user">Личная информация</h2>
+				<form class="form-user">
+					<label for="name" class="label-user">Имя:</label>
+					<input type="text" id="name" name="name" required class="input-login">
+
+					<label for="email" class="label-user">Email:</label>
+					<input type="email" id="email" name="email" required class="input-login">
+
+					<label for="phone" class="label-user">Телефон:</label>
+					<input type="tel" id="phone" name="phone" required class="input-login">
+					<br>
+					<input type="submit" value="Сохранить изменения" class="button-menu-menu">
+				</form>
+			</div>
+
+			<div id="saved-addresses">
+				<h2 class="h2-user">Сохраненные адреса</h2>
+				<ul class="ul-user">
+					<li>Address 1</li>
+					<li>Address 2</li>
+					<li>Address 3</li>
+				</ul>
+
+				<form class="form-user">
+					<label for="address" class="label-user">Добавить новый адресс:</label>
+					<input type="text" id="address" name="address" required class="input-login">
+					<br>
+					<input type="submit" value="Добавить адрес" class="button-menu-menu">
+				</form>
+			</div>
+
+			<div id="account-actions">
+				<h2 class="h2-user">Изменение пароля</h2>
+				<form class="form-user">
+					<label for="current-password" class="label-user">Текущий пароль:</label>
+					<input type="password" id="current-password" class="input-login" required>
+
+					<label for="new-password" class="label-user">Новый пароль:</label>
+					<input type="password" id="new-password" class="input-login" required>
+
+					<label for="confirm-password" class="label-user">Подтвердите новый пароль:</label>
+					<input type="password" id="confirm-password" class="input-login" required>
+					<br>
+					<input type="submit" value="Сохранить" class="button-menu-menu">
+				</form>
+			</div>
+			<a href="#" class="a-user">Выйти</a>
 		</div>
 	</div>
 	<div class="modal-login">
 		<div class="modal-content-login">
 			<div class="body-login">
 				<div class="container" id="container">
+					<div class="form-container sign-in-container">
+						<form class="form-login" action="#">
+							<h1 class="h1-login">Sign in</h1>
+							<span class="span-login">or use your account</span>
+							<input class="input-login" type="email" placeholder="Email" />
+							<input class="input-login" type="password" placeholder="Password" />
+							<a href="#" class="a-login">Forgot your password?</a>
+							<button class="button-login">Sign In</button>
+						</form>
+					</div>
 					<div class="form-container sign-up-container">
 						<form class="form-login" action="#">
 							<a href="#close" title="Закрыть" class="close" id="closeButtonRight">X</a>
@@ -508,29 +619,19 @@
 							<button class="button-login">Sign Up</button>
 						</form>
 					</div>
-					<div class="form-container sign-in-container">
-						<form class="form-login" action="#">
-							<h1 class="h1-login">Sign in</h1>
-							<span class="span-login">or use your account</span>
-							<input class="input-login" type="email" placeholder="Email" />
-							<input class="input-login" type="password" placeholder="Password" />
-							<a href="#" class="a-login">Forgot your password?</a>
-							<button class="button-login">Sign In</button>
-						</form>
-					</div>
 					<div class="overlay-container">
 						<div class="overlay">
-							<div class="overlay-panel overlay-left">
-								<h1 class="h1-login">Welcome Back!</h1>
-								<p class="p-login">To order pizza, please log in with your personal details</p>
-								<button class="button-login ghost" id="signIn">Sign In</button>
-								<br>
-							</div>
 							<div class="overlay-panel overlay-right">
 								<a href="#close" title="Закрыть" class="close" id="closeButtonLeft">X</a>
 								<h1 class="h1-login">Hello, Friend!</h1>
 								<p class="p-login">You can register and start ordering pizza</p>
 								<button class="button-login ghost" id="signUp">Sign Up</button>
+								<br>
+							</div>
+							<div class="overlay-panel overlay-left">
+								<h1 class="h1-login">Welcome Back!</h1>
+								<p class="p-login">To order pizza, please log in with your personal details</p>
+								<button class="button-login ghost" id="signIn">Sign In</button>
 								<br>
 							</div>
 						</div>
@@ -562,5 +663,6 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>

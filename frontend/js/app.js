@@ -10,10 +10,10 @@ document.addEventListener('mousemove', e => {
 document.addEventListener('DOMContentLoaded', function() {
 	const menuSection = document.getElementById('Menu');
 	const basketSection = document.getElementById('Basket');
-	const contactsSection = document.getElementById('Contacts');
+	const userSection = document.getElementById('User');
 	menuSection.style.display = 'none';
 	basketSection.style.display = 'none';
-	contactsSection.style.display = 'none';
+	userSection.style.display = 'none';
 });
 document.addEventListener('DOMContentLoaded', function() {
 	const snackSection = document.getElementById('Menu-Snack');
@@ -43,3 +43,4 @@ openModalLink.addEventListener('click', (event) => {
 	container.classList.add('right-panel-active');
 	document.body.classList.add('modal-active');
 });
+
