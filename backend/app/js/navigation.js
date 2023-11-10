@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const PanelBasketButton = document.getElementById('PanelBasketButton');
     const PanelAboutButton = document.getElementById('PanelAboutButton');
     const PanelLoginButton = document.getElementById('PanelLoginButton');
+    const PanelUserButton = document.getElementById('PanelUserButton');
 
     // Разделы страницы
     const menuSection = document.getElementById('MenuSection');
     const basketSection = document.getElementById('BasketSection');
     const aboutSection = document.getElementById('AboutSection');
     const loginSection = document.getElementById('LoginSection');
+    const userSection = document.getElementById('UserSection');
 
     // Кнопки для переключения разделов меню
     const PizzaButton = document.getElementById('PizzaButton');
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     basketSection.style.display = 'none';
     aboutSection.style.display = 'none';
     loginSection.style.display = 'none';
+    userSection.style.display = 'none';
 
     // Загрузка данных о категориях
     app.listPizza();
@@ -88,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         basketSection.style.display = 'none';
         aboutSection.style.display = 'none';
         loginSection.style.display = 'none';
+        userSection.style.display = 'none';
         menuSection.style.display = 'block';
         el = 'MenuSection';
 
@@ -97,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuSection.style.display = 'none';
         aboutSection.style.display = 'none';
         loginSection.style.display = 'none';
+        userSection.style.display = 'none';
         basketSection.style.display = 'block';
         el = 'BasketSection';
     }
@@ -105,8 +110,17 @@ document.addEventListener('DOMContentLoaded', function () {
         menuSection.style.display = 'none';
         basketSection.style.display = 'none';
         loginSection.style.display = 'none';
+        userSection.style.display = 'none';
         aboutSection.style.display = 'block';
         el = 'AboutSection';
+    }
+    function showUser() {
+        menuSection.style.display = 'none';
+        basketSection.style.display = 'none';
+        loginSection.style.display = 'none';
+        aboutSection.style.display = 'none';
+        userSection.style.display = 'block';
+        el = 'UserSection';
     }
 
     function showLogin() {
@@ -149,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
     PanelBasketButton.addEventListener('click', showBasket);
     PanelAboutButton.addEventListener('click', showAbout);
     PanelLoginButton.addEventListener('click', showLogin);
+    PanelUserButton.addEventListener('click', showUser);
 
     // Назначаем обработчики событий на кнопки разделов меню
     PizzaButton.addEventListener('click', showPizza);
