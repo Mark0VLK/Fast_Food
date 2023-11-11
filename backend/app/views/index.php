@@ -47,6 +47,7 @@
     <button class="button-Menu1" id="PanelBasketButton">Корзина<span class="red">5</span></button>
     <button class="button-Menu1" id="PanelAboutButton">О нас</button>
     <button class="button-Menu1" id="PanelLoginButton">Войти</button>
+    <button class="button-Menu1" id="PanelUserButton">Пользователь</button>
 </div>
 <hr>
 <div id="Form">
@@ -198,6 +199,60 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+    <div id="UserSection">
+        <div class="user-container">
+            <h1 class="h1-user">Профиль пользователя</h1>
+
+            <div id="personal-info">
+                <h2 class="h2-user">Личная информация</h2>
+                <form class="form-user">
+                    <label for="name" class="label-user">Имя:</label>
+                    <input type="text" id="name" name="name" required class="inputL">
+
+                    <label for="email" class="label-user">Email:</label>
+                    <input type="email" id="email" name="email" required class="inputL">
+
+                    <label for="phone" class="label-user">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required class="inputL">
+                    <br>
+                    <input type="submit" value="Сохранить изменения" class="button-Menu3">
+                </form>
+            </div>
+
+            <div id="saved-addresses">
+                <h2 class="h2-user">Сохраненные адреса</h2>
+                <ul class="ul-user">
+                    <li>Address 1</li>
+                    <li>Address 2</li>
+                    <li>Address 3</li>
+                </ul>
+
+                <form class="form-user">
+                    <label for="address" class="label-user">Добавить новый адресс:</label>
+                    <input type="text" id="address" name="address" required class="inputL">
+                    <br>
+                    <input type="submit" value="Добавить адрес" class="button-Menu3">
+                </form>
+            </div>
+
+            <div id="account-actions">
+                <h2 class="h2-user">Изменение пароля</h2>
+                <form class="form-user">
+                    <label for="current-password" class="label-user">Текущий пароль:</label>
+                    <input type="password" id="current-password" class="inputL" required>
+
+                    <label for="new-password" class="label-user">Новый пароль:</label>
+                    <input type="password" id="new-password" class="inputL" required>
+
+                    <label for="confirm-password" class="label-user">Подтвердите новый пароль:</label>
+                    <input type="password" id="confirm-password" class="inputL" required>
+                    <br>
+                    <input type="submit" value="Сохранить" class="button-Menu3">
+                </form>
+            </div>
+            <a href="#" class="a-user">Выйти</a>
         </div>
     </div>
     <div id="openModal1" class="modalDialog">
