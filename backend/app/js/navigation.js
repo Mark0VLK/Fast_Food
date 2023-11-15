@@ -13,12 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const PanelBasketButton = document.getElementById('PanelBasketButton');
     const PanelAboutButton = document.getElementById('PanelAboutButton');
     const PanelLoginButton = document.getElementById('PanelLoginButton');
+    const PanelUserButton = document.getElementById('PanelUserButton');
+
 
     // Разделы страницы
     const menuSection = document.getElementById('MenuSection');
     const basketSection = document.getElementById('BasketSection');
     const aboutSection = document.getElementById('AboutSection');
     const loginSection = document.getElementById('LoginSection');
+    const userSection = document.getElementById('UserSection');
 
     // Кнопки для переключения разделов меню
     const PizzaButton = document.getElementById('PizzaButton');
@@ -43,15 +46,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Функции для прокрутки к разделам меню
     function showMenu1() {
         form.scrollIntoView({
-            block: 'nearest',
-            behavior: 'smooth'
+            block: 'nearest',  // Прокручивает в поле зрения ближайшего элемента, выравнивая его по ближайшему краю
+            behavior: 'smooth' // анимирует переход прокрутки, обеспечивая эффект плавной прокрутки
         });
     }
 
     function showMenu2() {
+        // Получаем ссылку на элемент с идентификатором 'PizzaSection'
         const block = PizzaSection;
+        // Проверяем, существует ли элемент
         if (block) {
+            // Вычисляем отступ для прокрутки, учитывая вертикальный отступ в 80 пикселей
             const offset = block.offsetTop - 80; // Устанавливаем отступ (в пикселях)
+            // Прокручиваем до вычисленного отступа с плавным эффектом
             window.scrollTo({
                 top: offset,
                 behavior: 'smooth'
@@ -88,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         basketSection.style.display = 'none';
         aboutSection.style.display = 'none';
         loginSection.style.display = 'none';
+        userSection.style.display = 'none';
         menuSection.style.display = 'block';
         el = 'MenuSection';
 
@@ -97,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuSection.style.display = 'none';
         aboutSection.style.display = 'none';
         loginSection.style.display = 'none';
+        userSection.style.display = 'none';
         basketSection.style.display = 'block';
         el = 'BasketSection';
     }
@@ -105,8 +114,17 @@ document.addEventListener('DOMContentLoaded', function () {
         menuSection.style.display = 'none';
         basketSection.style.display = 'none';
         loginSection.style.display = 'none';
+        userSection.style.display = 'none';
         aboutSection.style.display = 'block';
         el = 'AboutSection';
+    }
+    function showUser() {
+        menuSection.style.display = 'none';
+        basketSection.style.display = 'none';
+        loginSection.style.display = 'none';
+        aboutSection.style.display = 'none';
+        userSection.style.display = 'block';
+        el = 'UserSection';
     }
 
     function showLogin() {
@@ -115,19 +133,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 menuSection.style.display = 'block';
                 basketSection.style.display = 'none';
                 aboutSection.style.display = 'none';
+                userSection.style.display = 'none';
                 loginSection.style.display = 'block';
                 break;
             case 'BasketSection':
                 menuSection.style.display = 'none';
                 basketSection.style.display = 'block';
                 aboutSection.style.display = 'none';
+                userSection.style.display = 'none';
                 loginSection.style.display = 'block';
                 break;
             case 'AboutSection':
                 menuSection.style.display = 'none';
                 basketSection.style.display = 'none';
+                userSection.style.display = 'none';
                 aboutSection.style.display = 'block';
                 loginSection.style.display = 'block';
+                break;
+            case 'UserSection':
+                menuSection.style.display = 'none';
+                basketSection.style.display = 'none';
+                aboutSection.style.display = 'none';
+                loginSection.style.display = 'none';
+                userSection.style.display = 'block';
                 break;
         }
     }
@@ -149,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
     PanelBasketButton.addEventListener('click', showBasket);
     PanelAboutButton.addEventListener('click', showAbout);
     PanelLoginButton.addEventListener('click', showLogin);
+    PanelUserButton.addEventListener("click", showUser);
 
     // Назначаем обработчики событий на кнопки разделов меню
     PizzaButton.addEventListener('click', showPizza);

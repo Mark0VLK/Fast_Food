@@ -142,9 +142,10 @@ const app = new (function () {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                this.PizzaCard.innerHTML = "";
+                this.PizzaCard.innerHTML = ""; // Очищаем содержимое PizzaCard
                 data.forEach((item) => {
                     console.log(data);
+                    // Создаем HTML-разметку и добавляем ее в PizzaCard
                     this.PizzaCard.innerHTML += `
 
                     <!-- Генерация HTML с информацией о пицце -->

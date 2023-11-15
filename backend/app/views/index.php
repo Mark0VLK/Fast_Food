@@ -47,6 +47,7 @@
     <button class="button-Menu1" id="PanelBasketButton">Корзина<span class="red">5</span></button>
     <button class="button-Menu1" id="PanelAboutButton">О нас</button>
     <button class="button-Menu1" id="PanelLoginButton">Войти</button>
+    <button class="button-Menu1" id="PanelUserButton">Кабинет</button>
 </div>
 <hr>
 <div id="Form">
@@ -110,6 +111,33 @@
             </div>
             <div class="rounded-image">
                 <img src="../../../frontend/img/pizzaPech.png" alt="пицца в печи">
+            </div>
+        </div>
+        <div class="container-about">
+            <div class="text">
+                <p>Добро пожаловать в ресторан "Итальянская пицца" - уютное место, где ваши вкусовые предпочтения будут приятно удовлетворены!</p>
+                <p>Мы - команда настоящих поклонников итальянской кухни, поставивших перед собой цель - познакомить вас с настоящим итальянским вкусом пиццы.</p>
+            </div>
+            <div class="rounded-image">
+                <img src="../../../frontend/img/vnytri.png" alt="Внутри">
+            </div>
+        </div>
+        <div class="container-about">
+            <div class="text">
+                <p>Добро пожаловать в ресторан "Итальянская пицца" - уютное место, где ваши вкусовые предпочтения будут приятно удовлетворены!</p>
+                <p>Мы - команда настоящих поклонников итальянской кухни, поставивших перед собой цель - познакомить вас с настоящим итальянским вкусом пиццы.</p>
+            </div>
+            <div class="rounded-image">
+                <img src="../../../frontend/img/vnytri.png" alt="Внутри">
+            </div>
+        </div>
+        <div class="container-about">
+            <div class="text">
+                <p>Добро пожаловать в ресторан "Итальянская пицца" - уютное место, где ваши вкусовые предпочтения будут приятно удовлетворены!</p>
+                <p>Мы - команда настоящих поклонников итальянской кухни, поставивших перед собой цель - познакомить вас с настоящим итальянским вкусом пиццы.</p>
+            </div>
+            <div class="rounded-image">
+                <img src="../../../frontend/img/vnytri.png" alt="Внутри">
             </div>
         </div>
         <h2 class="text-h2">Приглашаем вас насладиться ароматными и вкусными пиццами в ресторане "Итальянская пицца" и открыть для себя настоящий вкус Италии!</h2>
@@ -183,7 +211,7 @@
             </div>
 
             <div class="loginL">
-                <form>
+                <form action="javascript:void(0);" onsubmit="userA.find()">
                     <hr class="h">
                     <label class="labelL" for="chk" aria-hidden="true">Вход</label>
                     <label>
@@ -198,6 +226,84 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+    <div id="UserSection">
+        <div class="user-container">
+            <h1 class="h1-user">Профиль пользователя</h1>
+
+            <div id="personal-info">
+                <h2 class="h2-user">Личная информация</h2>
+                <form class="form-user" action="javascript:void(0);" onsubmit="userChangeInfo.updateInfo()">
+                    <label class="label-user">Имя:</label>
+                    <input
+                        type="text"
+                        class="inputL"
+                        id="ChangeName"
+                        placeholder="Имя"
+                        value="Марк123"
+                        required
+                    />
+
+                    <label class="label-user">Фамилия:</label>
+                    <input
+                        type="text"
+                        class="inputL"
+                        id="ChangeSurname"
+                        placeholder="Фамилия"
+                        value="Ф123"
+                        required
+                    />
+
+                    <label for="surname" class="label-user">Дата рождения:</label>
+                    <input
+                        type="text"
+                        class="inputL"
+                        id="ChangeBirthDate"
+                        placeholder="День рождения"
+                        value="Ддд123"
+                    />
+
+                    <label for="email" class="label-user">Email:</label>
+                    <input
+                        type="email"
+                        class="inputL"
+                        id="ChangeEmail"
+                        placeholder="email"
+                        value="123proba@gmail.com"
+                        required
+                    />
+
+                    <label for="phone" class="label-user">Телефон:</label>
+                    <input
+                        type="text"
+                        class="inputL"
+                        id="ChangePhone"
+                        placeholder="номер телефона"
+                        value="+37529"
+                        required
+                    />
+                    <br>
+                    <button type="submit" class="buttonL">Сохранить</button>
+                </form>
+            </div>
+
+            <div id="account-actions">
+                <h2 class="h2-user">Изменение пароля</h2>
+                <form class="form-user">
+                    <label for="current-password" class="label-user">Текущий пароль:</label>
+                    <input type="password" id="current-password" class="inputL" required>
+
+                    <label for="new-password" class="label-user">Новый пароль:</label>
+                    <input type="password" id="new-password" class="inputL" required>
+
+                    <label for="confirm-password" class="label-user">Подтвердите новый пароль:</label>
+                    <input type="password" id="confirm-password" class="inputL" required>
+                    <br>
+                    <input type="submit" value="Сохранить" class="button-Menu3">
+                </form>
+            </div>
+            <a href="#" class="a-user">Выйти</a>
         </div>
     </div>
     <div id="openModal1" class="modalDialog">
