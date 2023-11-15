@@ -286,6 +286,9 @@
                     <br>
                     <button type="submit" class="buttonL">Сохранить</button>
                 </form>
+                <br>
+                <br>
+                <button id="deleteUser" class="buttonL">Удалить учётную запись</button>
             </div>
 
             <div id="account-actions">

@@ -127,12 +127,14 @@ class User extends Connection
         }
     }
 
-    public static function delete($id)
+    public static function delete()
     {
+        $user_id_from_cookie = $_COOKIE['user_id']; // Получение user_id из куки
+
         try {
             $sql = 'DELETE FROM public."user" WHERE id = :id';
             $stmt = Connection::getConnection()->prepare($sql);
-            $stmt->bindParam(':id', $id);
+            $stmt->bindParam(':id', $user_id_from_cookie);
             $stmt->execute();
             return true;
         } catch (PDOException $th) {

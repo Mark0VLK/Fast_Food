@@ -105,6 +105,34 @@ const userChangeInfo = new (function () {
             .then((data) => {
                 // Вывод полученных данных в консоль (для отладки)
                 console.log(data);
+                alert("Двнные успешно обновлены!")
             });
     }
+})();
+
+const deleteUser = new (function () {
+
+    this.deleteUser = document.getElementById('deleteUser');
+
+    // Функция для удаления пользователя
+    this.delete = () => {
+
+        fetch("../controllers/userDelete.php")
+            .then((res) => res.json())
+            .then((data) => {
+                // Вывод полученных данных в консоль (для отладки)
+                console.log(data);
+
+                alert("Учётная запись успешно удалена.")
+
+                // Перенаправление на главную страницу после успешного удаления
+                window.location.href = "../views/index.php"; // URL главной страницы
+            })
+            .catch(error => {
+                // Обработка ошибок при удалении
+                console.error('Ошибка при удалении:', error);
+            });
+    }
+    // Привязка обработчика событий к кнопке deleteUser
+    this.deleteUser.addEventListener('click', this.delete);
 })();
